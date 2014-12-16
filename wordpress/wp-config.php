@@ -19,10 +19,10 @@
 define('DB_NAME', 'therefi2_wrd1');
 
 /** MySQL database username */
-define('DB_USER', 'therefi2_wrd1');
+define('DB_USER', '');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'cHa7Wh2LX3');
+define('DB_PASSWORD', '');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
