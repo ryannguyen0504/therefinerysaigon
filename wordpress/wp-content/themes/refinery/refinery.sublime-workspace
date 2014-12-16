@@ -1,0 +1,884 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"curent",
+				"currentWidth"
+			],
+			[
+				"Time",
+				"\"Times New Roman\""
+			],
+			[
+				"cu",
+				"cur_feature"
+			],
+			[
+				"col",
+				"column3"
+			],
+			[
+				"form",
+				"form_page_inside"
+			],
+			[
+				"fea",
+				"feature_reserve"
+			],
+			[
+				"cle",
+				"clearTimeout"
+			],
+			[
+				"feature_slid",
+				"feature_slideshow"
+			],
+			[
+				"clear",
+				"clearInterval"
+			],
+			[
+				"rig",
+				"right_box"
+			],
+			[
+				"feat",
+				"feature_id"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"fade",
+				"fadeIn"
+			],
+			[
+				"slid",
+				"slideshow"
+			],
+			[
+				"sli",
+				"slideshow"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"slide",
+				"run_slideshow"
+			],
+			[
+				"lan",
+				"lang_select"
+			],
+			[
+				"0",
+				"000"
+			],
+			[
+				"slidesho",
+				"slideshow_nav"
+			],
+			[
+				"inl",
+				":inline-block"
+			],
+			[
+				"sp",
+				"span"
+			],
+			[
+				"li",
+				"li"
+			],
+			[
+				"boto",
+				"border-bottom"
+			],
+			[
+				"htmlen",
+				"htmlentities"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"hei",
+				"height"
+			],
+			[
+				"paddi",
+				"padding"
+			],
+			[
+				"verti",
+				"vertical: vertical-align: type"
+			],
+			[
+				"tabl",
+				":table-cell"
+			],
+			[
+				"up",
+				"uppercase"
+			],
+			[
+				"cur",
+				"cursor: cursor: type"
+			],
+			[
+				"outli",
+				"outline"
+			],
+			[
+				"con",
+				"contact_content"
+			],
+			[
+				"marg",
+				"margin: margin-bottom: length"
+			],
+			[
+				"contact",
+				"contact_content"
+			],
+			[
+				"top",
+				"top"
+			],
+			[
+				"margin",
+				"margin: margin: T R B L"
+			],
+			[
+				"line",
+				"inline"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/C/xampp/xampp/htdocs/wp/wp-content/themes/refinery/header.php",
+			"settings":
+			{
+				"buffer_size": 4487,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/xampp/xampp/htdocs/wp/wp-content/themes/refinery/footer.php",
+			"settings":
+			{
+				"buffer_size": 95,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "function autoSize() {\n\n	currentWidth = $(window).width();\n\n	if (currentWidth<970) {\n		currentWidth = 970;\n	}\n	$('#wrapper').css('width',currentWidth);\n	$('#first_page').width(currentWidth);\n\n\n\n\n	currentHeight = $(window).height();\n	if (currentHeight<615) {\n		currentHeight = 615;\n	}\n	$('#first_page,#second_page,.main_bar,#switch_right,#switch_left').height(currentHeight);\n	main_height = currentHeight ;\n	$('#main_content').height(main_height);\n\n	$('#flower_bottom').css('top',currentHeight-30-139).css('left',currentWidth-30-92);\n\n\n\n\n}\n\n$(document).ready(function(){\n	//$('#wrapper').css('width',$(window).width());\n	if ($('#sub_bg').is('div')) {\n		$('#first_page .bg').html($('#sub_bg').html());\n	}\n	autoSize();\n	$.event.add(window,'load',autoSize);\n	$.event.add(window,'resize',autoSize);\n\n\n	$('.main_menu a').click(function(){\n		run_slideshow();\n		siderun = window.clearInterval(sliderun);\n		if ($('.main_bar').css('left')==='0px') {\n			$('.main_bar').stop(0,0).animate({\"left\":\"-222px\"},500,function(){\n				$('.main_bar').stop(0,0).animate({\"left\":\"0px\"},500);\n			});\n		} else {\n			$('.main_bar').stop(0,0).animate({\"left\":\"0px\"},500);\n		}\n\n\n		box = $(this).attr('data-box');\n		if (box===\"gray\") {\n			$('.close_button').hide();\n\n			if ($('.main_bar').css('left')==='0px') {\n				$('.main_bar').stop(0,0).animate({\"left\":\"-222px\"},500,function(){\n					$('.main_bar').stop(0,0).animate({\"left\":\"0px\"},500);\n					$('#gray_box').animate({\"left\":\"0px\"},500,function(){\n						$('.close_button').css('right','-726px');\n						$('.close_button').show();\n					});\n\n				});\n			} else {\n				$('.main_bar').stop(0,0).animate({\"left\":\"0px\"},500);\n				$('#gray_box').animate({\"left\":\"0px\"},500,function(){\n					$('.close_button').css('right','-726px');\n					$('.close_button').show();\n				});\n\n			}\n\n\n\n\n\n		} else {\n			$('#gray_box').stop(0,0).animate({\"left\":\"-928px\"},500);\n			$('.close_button').removeAttr('style');\n			$('.close_button').show();\n		}\n\n\n\n	});\n\n	$('.close_button').click(function(){\n		if ($('.close_button').attr('style')) {\n			$('.close_button').removeAttr('style');\n			$('#gray_box').stop(0,0).animate({\"left\":\"-928px\"},500);\n\n		}\n		$('.main_bar').animate({\"left\":\"-222px\"},500);\n		$('.close_button').hide();\n		sliderun = window.setInterval('run_slideshow()',5000);\n	});\n\n\n});\n\nwindow.onload = function () {\nsliderun = window.setInterval('run_slideshow()',5000);\n\n}\n\nfunction wait(milsecs){\n	var to_time = new Date().getTime() + milselocs;\n	while( new Date().getTime() < to_time ){}\n	return true;\n}\n\nfunction run_slideshow() {\n 	var cur_image = $('.bg img:visible');\n\n\n  	$(cur_image).fadeOut();\n  	if ($(cur_image).next('img').is('img')) {\n  		$(cur_image).next('img').fadeIn('slow');\n	} else {\n		$('.bg img:first').fadeIn('slow');\n	}\n\n}\n",
+			"file": "/C/xampp/xampp/htdocs/wp/wp-content/themes/refinery/js/js.js",
+			"file_size": 2745,
+			"file_write_time": 129773223853789062,
+			"settings":
+			{
+				"buffer_size": 2747,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/xampp/xampp/htdocs/wp/wp-content/themes/refinery/css/style.css",
+			"settings":
+			{
+				"buffer_size": 7935,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 97.0,
+		"selected_items":
+		[
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: a",
+				"Package Control: Add Repository"
+			]
+		],
+		"width": 416.0
+	},
+	"console":
+	{
+		"height": 171.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": false,
+		"show_minimap": false,
+		"show_open_files": true,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/refinery/index.php",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/refinery/style.css",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/damian/video_list_page - Copy.php",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/damian/feature_list_page.php",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/damian/feature_single_page.php",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/damian/form.php",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/damian/landing_feature_page.php",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/damian/client_comunique_single_page.php",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/damian/communique_list_page.php",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/damian/photo_list_page.php",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/damian/client_comunique_list_page.php",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/damian/header-yellow.php",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/damian/bespoke_projects_list_page.php",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/damian/header.php",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/damian/bespoke_projects_single_page.php",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/damian/single.php",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/damian/event_register_page.php",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/damian/footer.php",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/damian/css/style.css",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/damian/header-homepage.php",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/damian/photo_single_page.php",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/damian/video_list_page.php",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/damian/video_single_page.php",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/damian/video_list_page.php.bak",
+		"/C/Users/tfx/AppData/Roaming/Sublime Text 2/Packages/User/Distraction Free.sublime-settings",
+		"/C/Users/tfx/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/damian/footer-homepage.php",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/damian/appointment_page.php",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/damian/homepage.php",
+		"/C/xampp/xampp/htdocs/wordpress/wp-content/themes/hotel/contactus.php",
+		"/C/xampp/xampp/htdocs/wordpress/wp-content/themes/hotel/hotel.sublime-workspace",
+		"/C/xampp/xampp/htdocs/wordpress/wp-content/themes/hotel/homepage.php",
+		"/C/xampp/xampp/htdocs/wordpress/wp-content/themes/hotel/footer.php",
+		"/C/xampp/xampp/htdocs/wordpress/wp-content/themes/hotel/index.php",
+		"/C/xampp/xampp/htdocs/wordpress/wp-content/themes/hotel/header.php",
+		"/C/xampp/xampp/htdocs/wordpress/wp-content/themes/hotel/js/js.js",
+		"/C/xampp/xampp/htdocs/wordpress/wp-content/themes/hotel/js/jquery.min.js",
+		"/C/xampp/xampp/htdocs/wordpress/wp-content/themes/hotel/style.css",
+		"/C/xampp/xampp/htdocs/wordpress/wp-content/themes/hotel/css/ie7.css",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/tpg/css/style.css",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/teepeegee/css/style.css",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/tpg/js/js.js",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/tpg/settings.php",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/teepeegee/single.php",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/teepeegee/functions.php",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/teepeegee/css/picbox.css",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/tpg/index.php",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/teepeegee/contactpage.php",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/teepeegee/js/picbox.js",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/tpg/js/picbox.js",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/tpg/css/picbox.css",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/teepeegee/js/js.js",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/tpg/Picbox-2.2/source/picbox.js",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/tpg/Picbox-2.2/source/autoload.js",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/tpg/contactpage.php",
+		"/C/Users/tfx/AppData/Roaming/Sublime Text 2/Packages/User/Base File.sublime-settings",
+		"/C/Users/tfx/AppData/Roaming/Sublime Text 2/Packages/User/Global.sublime-settings",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/teepeegee/footer.php",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/teepeegee/aboutpage.php",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/teepeegee/newspage.php",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/tpg/newspage.php",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/teepeegee/index.php",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/tpg/single.php",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/tpg/footer.php",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/tpg/header.php",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/teepeegee/header.php",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/tpg/aboutpage.php",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/tpg/functions.php",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/teepeegee/favicon.ico",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/tpg/js/froogaloop.min.js",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/teepeegee/style.css",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/tpg/favicon.ico",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/tpg/style.css",
+		"/C/xampp/xampp/htdocs/wp/wp-content/themes/tpg/sftp-settings.json",
+		"/C/Users/tfx/AppData/Roaming/Sublime Text 2/Packages/SFTP/Default (Windows).sublime-keymap",
+		"/C/Users/tfx/AppData/Roaming/Sublime Text 2/Packages/SFTP/SFTP.sublime-settings",
+		"/C/Users/tfx/AppData/Roaming/Sublime Text 2/Packages/Default/Base File.sublime-settings",
+		"/C/Users/tfx/AppData/Roaming/Sublime Text 2/Packages/Color Scheme - Default/Twilight.tmTheme",
+		"/C/Users/tfx/AppData/Roaming/Sublime Text 2/Packages/ZenCoding/README.creole",
+		"/C/Users/tfx/AppData/Roaming/Sublime Text 2/Packages/Default/Default (Windows).sublime-keymap"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"video",
+			"#feature",
+			"landing",
+			"photo_list",
+			"slider6",
+			".slider",
+			"detect_",
+			"mouseover",
+			"#right_box",
+			"left_box",
+			"jsscrol",
+			".slider",
+			"window.location.hash",
+			" / ",
+			"</span>",
+			"<li><span>",
+			"click",
+			"tinydrag",
+			"google",
+			"google_map",
+			"google map",
+			"more_conten",
+			"more",
+			"custom5",
+			"up.",
+			"up.png",
+			".box_de",
+			"footer",
+			".dim",
+			"width:960px;",
+			"font-family:\"DINRegular\";"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"</span><span class=\"lang \">",
+			"</a>",
+			"<li><a href=\"#\">",
+			"in_gallery"
+		],
+		"reverse": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/C/xampp/xampp/htdocs/wp/wp-content/themes/refinery/header.php",
+					"settings":
+					{
+						"buffer_size": 4487,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								665,
+								692
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"remote_loading": false,
+							"sublimelinter": true,
+							"sublimelinter_delay": 0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"Python Django": "python"
+							},
+							"sublimelinter_wrap_find": true,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/xampp/xampp/htdocs/wp/wp-content/themes/refinery/footer.php",
+					"settings":
+					{
+						"buffer_size": 95,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								74,
+								74
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"remote_loading": false,
+							"sublimelinter": true,
+							"sublimelinter_delay": 0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"Python Django": "python"
+							},
+							"sublimelinter_wrap_find": true,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/xampp/xampp/htdocs/wp/wp-content/themes/refinery/js/js.js",
+					"settings":
+					{
+						"buffer_size": 2747,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1890,
+								1890
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"remote_loading": false,
+							"sublimelinter": true,
+							"sublimelinter_delay": 0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"Python Django": "python"
+							},
+							"sublimelinter_wrap_find": true,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1173.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 3,
+					"file": "/C/xampp/xampp/htdocs/wp/wp-content/themes/refinery/css/style.css",
+					"settings":
+					{
+						"buffer_size": 7935,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								419,
+								419
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"remote_loading": false,
+							"sublimelinter": true,
+							"sublimelinter_delay": 0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"Python Django": "python"
+							},
+							"sublimelinter_wrap_find": true,
+							"synced": false,
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 600.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 37.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": false,
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"head",
+				"header.php"
+			],
+			[
+				"phot",
+				"photo_list_page.php"
+			],
+			[
+				"js.",
+				"teepeegee/js/js.js"
+			],
+			[
+				"ne",
+				"teepeegee/newspage.php"
+			],
+			[
+				"new",
+				"tpg/newspage.php"
+			],
+			[
+				"sin",
+				"tpg/single.php"
+			],
+			[
+				"picbox.css",
+				"tpg/css/picbox.css"
+			],
+			[
+				"ab",
+				"tpg/aboutpage.php"
+			],
+			[
+				"abou",
+				"teepeegee/aboutpage.php"
+			],
+			[
+				"n",
+				"teepeegee/newspage.php"
+			],
+			[
+				"news",
+				"tpg/newspage.php"
+			],
+			[
+				"about",
+				"teepeegee/aboutpage.php"
+			],
+			[
+				"style",
+				"css/style.css"
+			],
+			[
+				"index",
+				"index.php"
+			],
+			[
+				"fun",
+				"functions.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"ga",
+				"/C/xampp/xampp/htdocs/galleryquynh/galleryquynh.sublime-project"
+			],
+			[
+				"dami",
+				"/C/xampp/xampp/htdocs/wordpress/wp-content/themes/hotel/damian.sublime-project"
+			],
+			[
+				"",
+				"/C/xampp/xampp/htdocs/galleryquynh/galleryquynh.sublime-project"
+			],
+			[
+				"neil",
+				"/C/xampp/xampp/htdocs/wp/wp-content/themes/neil/neil.sublime-project"
+			],
+			[
+				"ho",
+				"/C/xampp/xampp/htdocs/wordpress/wp-content/themes/hotel/hotel.sublime-project"
+			],
+			[
+				"tpg",
+				"/C/xampp/xampp/htdocs/wp/wp-content/themes/tpg/tpg.sublime-project"
+			],
+			[
+				"d",
+				"/C/xampp/xampp/htdocs/wordpress/wp-content/themes/hotel/damian.sublime-project"
+			],
+			[
+				"nei",
+				"/C/xampp/xampp/htdocs/wp/wp-content/themes/neil/neil.sublime-project"
+			],
+			[
+				"tasa",
+				"/C/xampp/xampp/htdocs/wordpress/wp-content/themes/tasara/tasara.sublime-project"
+			],
+			[
+				"au",
+				"/C/xampp/xampp/htdocs/wp/wp-content/themes/auparc/auparc.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 206.0,
+	"status_bar_visible": false
+}
