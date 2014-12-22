@@ -152,15 +152,11 @@
 
                         <li class="seperated">/</li>
 
-                        <li><a href="#" data-box="green" data-bg="menu_bg" id="menu_a">Menu</a></li>
+                        <li><a href="#" data-box="green" data-bg="menu_bg" data-url="<?php bloginfo('url'); ?>/main-menu" id="menu_a">Menu</a></li>
 
                         <li class="seperated">/</li>
 
                         <li><a href="#" data-box="brown" data-bg="homemade_bg" data-url="<?php bloginfo('url'); ?>/homemade">Homemade</a></li>
-
-                        <li class="seperated">/</li>
-
-                        <li><a href="#" data-box="green" data-bg="brunch_bg" id="brunch_a">Brunch</a></li>
 
                         <li class="seperated">/</li>
 
@@ -229,67 +225,12 @@
                         </ul>    
 
                     </div>
-
-                    <div id="contact_p">
-
-                    <h3>LOCATION</h3>
-
-                    <p>74 Hai Ba Trung  <br>Q.1, Saigon, Vietnam</p>
-
-                    <hr>
-
-
-
-                    <h3>RESTAURANT HOURS</h3>
-
-                    <p>11a.m. till late</p>
-                    <hr>
-                    <h3>CONTACT</h3>
-                    <p>(08) 3823 0509 <br>                                        <a href="mailto:yves@therefinerysaigon.com">yves@therefinerysaigon.com</a><br>
-<a href="mailto:info@therefinerysaigon.com">info@therefinerysaigon.com</a>
-
-</p>
-
-                    </div>
-
-
-
-                    
-
                 </div>  
 
                 <div id="menu_content" class="alt_menu">
                     <hr>
                     <p class="cap gillsans">All our bread, pasta, sauces, desserts and ice-cream are home-made on the premises.</p>
-                    <hr>
-                    <div class="menu">
-
-                        <ul>
-
-                            <li><a href="#" data-bg="menu_bg" data-url="<?php bloginfo('url'); ?>/main-menu">Menu</a></li>
-
-                            <li><a href="#" data-bg="menu_bg" data-url="<?php bloginfo('url'); ?>/menu-set">SET LUNCH</a></li>
-
-                            <li><a href="#" data-bg="brunch_bg" id="brunch_alt">BRUNCH</a></li>
-
-                            <li><a href="#" data-bg="menu_bg" data-url="<?php bloginfo('url'); ?>/menu-drinks">DRINKS</a></li>
-
-                            <li><a href="#" data-bg="menu_bg" data-url="<?php bloginfo('url'); ?>/menu-wine">WINE LIST</a></li>
-
-                            <li><a href="#" data-bg="menu_bg" data-url="<?php bloginfo('url'); ?>/menu-kids">KIDS</a></li>
-
-                        </ul>                       
-
-                    </div>
-
-                    <hr>
-
-                    <a href="http://www.therefinerysaigon.com/wordpress/wp-content/uploads/2012/09/refinery_fullmenu-revised.pdf" target="_blank" class="cap download_link">Download a menu</a>
-
-
-
                    
-
                 </div>
 
                 <div id="brunch_content" class="alt_menu">
@@ -319,7 +260,26 @@
 
 
                 </div>
-
+					<div id="contact_p">
+						
+						                    <h3>LOCATION</h3>
+						
+						                    <p>74 Hai Ba Trung  <br>Q.1, Saigon, Vietnam</p>
+						
+						                    <hr>
+						
+						
+						
+						                    <h3>RESTAURANT HOURS</h3>
+						
+						                    <p>11a.m. till late</p>
+						                    <hr>
+						                    <h3>CONTACT</h3>
+						                    <p>(08) 3823 0509 <br>                                        <a href="mailto:yves@therefinerysaigon.com">yves@therefinerysaigon.com</a><br>
+						<a href="mailto:info@therefinerysaigon.com">info@therefinerysaigon.com</a>
+						
+						</p>
+                    </div>
                 <div class="main_footer">
 
                     <p>
